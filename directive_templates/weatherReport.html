@@ -1,8 +1,17 @@
-<div class="panel panel-default">
+<div class="panel panel-info">
 	<div class="panel-heading">
 		<h3 class="panel-title">{{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}</h3>
 	</div>
-	<div class="panel-body">
-		Daytime Temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.day }) }}
+	<div class="panel-body custom-scroll overflow:scroll">
+		<div class="col-md-6">
+		Morning Temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.morn }) }} <br>
+		Daytime Temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.day }) }} <br>
+		Evening Temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.eve }) }}
+		</div>
+		<div class="col-md-6">
+		Humidity: {{ weatherDay.humidity }} <br>
+		Pressure: {{ weatherDay.pressure }} <br>
+		{{ weatherDay.weather[0].main }} 
+		</div>
 	</div>
 </div>

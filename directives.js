@@ -9,7 +9,8 @@ weatherApp.directive('weatherReport', function() {
 			weatherDay: "=",			//two-way binding - object
 			convertToStandard: "&",		//two-way binding - function
 			convertToDate: "&",			
-			dateFormat: "@"				//one-way binding - string
+			dateFormat: "@",
+			pressure: "@"				//one-way binding - string
 		}
 	}
 
