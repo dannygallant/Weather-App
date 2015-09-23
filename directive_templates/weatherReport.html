@@ -4,14 +4,15 @@
 	</div>
 	<div class="panel-body custom-scroll overflow:scroll">
 		<div class="col-md-6">
-		Morning Temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.morn }) }} <br>
-		Daytime Temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.day }) }} <br>
-		Evening Temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.eve }) }}
+		Low Temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.min }) }}F <br>
+		High Temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.max }) }}F <br>
+		{{ weatherDay.weather[0].main }} 
 		</div>
 		<div class="col-md-6">
-		Humidity: {{ weatherDay.humidity }} <br>
-		Pressure: {{ weatherDay.pressure }} <br>
-		{{ weatherDay.weather[0].main }} 
+		Humidity: {{ weatherDay.humidity }}% <br>
+		Pressure: {{ weatherDay.pressure }} hpa <br>
+		Clouds: {{ weatherDay.clouds }}%
+		
 		</div>
 	</div>
 </div>
